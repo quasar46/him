@@ -1,0 +1,8 @@
+.footer {
+	background-color: $color-dark-blue;
+	color: $color-white;
+	padding: 70px 0;
+	@media (max-width: 768px) {
+		padding: 35px;
+	}
+}

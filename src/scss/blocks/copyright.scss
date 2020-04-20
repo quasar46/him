@@ -1,0 +1,16 @@
+.copyright {
+	display: flex;
+	justify-content: space-between;
+	a {
+		color: $color-white;
+	}
+	@media (max-width: 768px) {
+		flex-direction: column;
+		text-align: center;
+		span {
+			&:first-child {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

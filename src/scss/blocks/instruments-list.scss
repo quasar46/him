@@ -1,0 +1,68 @@
+.instruments-list {
+	margin-bottom: 60px;
+	.slick-track {
+		display: flex;
+	}
+	.item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: auto;
+		text-align: center;
+		background-color: $color-white;
+		border-radius: 20px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		margin: 10px;
+		padding: 35px 25px 40px;
+		@media (max-width: 768px) {
+			padding: 25px 15px;
+		}
+	}
+	.title {
+		font-size: 24px;
+		font-weight: 500;
+		margin-bottom: 20px;
+		overflow: hidden;
+		@media (max-width: 768px) {
+			font-size: 12px;
+		}
+	}
+	.text {
+		font-size: 14px;
+		font-weight: 500;
+		color: #5c5c5c;
+		@media (max-width: 768px) {
+			font-size: 10px;
+		}
+	}
+	.picture {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// height: 270px;
+		margin-bottom: 20px;
+		img {
+			@media (max-width: 768px) {
+				height: 110px;
+			}
+		}
+	}
+	.text {
+		text-align: left;
+	}
+}
+
+.instruments-list__second {
+	padding: 0 50px;
+	.item {
+		height: auto;
+		text-align: left;
+		margin: 10px 20px;
+		@media (max-width: 768px) {
+			margin: 10px;
+		}
+	}
+	@media (max-width: 768px) {
+		padding: 0;
+	}
+}

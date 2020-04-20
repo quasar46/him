@@ -1,0 +1,123 @@
+.results-list {
+	margin-right: -15px;
+	.item {
+		position: relative;
+		padding-right: 15px;
+		display: flex;
+		justify-content: center;
+		.before {
+			position: absolute;
+			width: 120px;
+			height: 62px;
+			top: 20px;
+			left: 0;
+			background-image: url("../images/after.png");
+		}
+		.after {
+			position: absolute;
+			width: 120px;
+			height: 62px;
+			top: 20px;
+			right: 14px;
+			background-image: url("../images/before.png");
+		}
+	}
+}
+
+.results-list__mobile {
+	padding-bottom: 55px;
+}
+
+.switch {
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 31px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	input {
+		display: none;
+		&:checked + .slider {
+			background-color: #2196f3;
+		}
+		&:focus + .slider {
+			box-shadow: 0 0 1px #2196f3;
+		}
+		&:checked + .slider:before {
+			transform: translateX(30px);
+			content: "ПОСЛЕ";
+			width: 70px;
+			border-radius: 20px;
+		}
+	}
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $color-dark-blue;
+		transition: 0.4s;
+		border-radius: 34px;
+
+		&::before {
+			position: absolute;
+			content: "ДО";
+			height: 31px;
+			width: 31px;
+			left: 0;
+			bottom: 0;
+			background-color: $color-light-blue;
+			transition: 0.4s;
+			border-radius: 50%;
+			font-size: 12px;
+			font-weight: 500;
+			text-transform: uppercase;
+			color: $color-white;
+			text-align: center;
+			line-height: 31px;
+			z-index: 20;
+		}
+		&.round:before {
+			border-radius: 50%;
+		}
+	}
+	&::before {
+		content: "ДО";
+		position: absolute;
+		left: 10px;
+		bottom: 0;
+		line-height: 31px;
+		font-size: 12px;
+		font-weight: 500;
+		color: $color-white;
+		text-transform: uppercase;
+		z-index: 10;
+	}
+	&::after {
+		content: "ПОСЛЕ";
+		position: absolute;
+		right: 15px;
+		bottom: 0;
+		line-height: 31px;
+		font-size: 12px;
+		font-weight: 500;
+		color: $color-white;
+		text-transform: uppercase;
+		z-index: 10;
+	}
+}
+
+.results-list__mobile {
+	.item-wrap {
+		display: flex;
+		flex-direction: column;
+		.item {
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+	}
+}

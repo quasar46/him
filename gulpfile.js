@@ -68,7 +68,7 @@ gulp.task("js", function () {
 
 gulp.task("images", function () {
     console.log(imagemin);
-    return gulp.src("src/images/*.*")
+    return gulp.src("src/images/**/*.*")
         .pipe(imagemin([
             imagemin.gifsicle({
                 interlaced: true
@@ -136,7 +136,7 @@ gulp.task("server", function () {
     gulp.watch("src/scss/**/*.scss", gulp.series("css", "refresh"));
     gulp.watch("src/pug/**/*.pug", gulp.series("pug", "refresh"));
     gulp.watch("src/js/*.js", gulp.series("js", "refresh"));
-    gulp.watch("src/images/*.*", gulp.series("images", "refresh"));
+    gulp.watch("src/images/**/*.*", gulp.series("images", "refresh"));
     gulp.watch("src/scss/vendor/*.*", gulp.series("vendor", "refresh"));
 });
 

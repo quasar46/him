@@ -2,6 +2,7 @@
 *::before,
 *::after {
 	box-sizing: inherit;
+	outline: none;
 }
 
 html {
@@ -13,6 +14,7 @@ body {
 	color: $color-black;
 	font-size: 16px;
 	line-height: 1.2;
+	overflow-x: hidden;
 }
 
 img {
@@ -35,10 +37,50 @@ li {
 	margin: 0;
 	list-style: none;
 }
+ol {
+	padding-left: 0;
+}
 
 .container {
-	max-width: 1440px;
+	max-width: 1200px;
 	width: 100%;
-	padding: 0 60px;
+	padding: 0 15px;
 	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+button.btn {
+	font-size: 16px;
+	font-weight: 500;
+	background-color: $color-light-blue;
+	border: none;
+	border-radius: 40px;
+	padding: 25px 75px;
+	text-transform: uppercase;
+	color: $color-white;
+	&:hover {
+		@media (min-width: 768px) {
+			background-color: $color-dark-blue;
+		}
+	}
+	@media (max-width: 768px) {
+		font-size: 12px;
+		padding: 15px 25px;
+	}
+}
+
+section {
+	position: relative;
+}
+
+.on-desktop {
+	@media (max-width: 769px) {
+		display: none !important;
+	}
+}
+
+.on-mobile {
+	@media (min-width: 769px) {
+		display: none !important;
+	}
 }

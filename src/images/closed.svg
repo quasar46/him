@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-1473.41,-48.163)">
+        <g transform="matrix(1,0,0,1,1000,24.2364)">
+            <g id="Menu_burger_hover" transform="matrix(0.128914,0,0,0.128914,492.75,43.2636)">
+                <g transform="matrix(1,0,0,1,-150,-150)">
+                    <g>
+                        <path d="M213.179,215.657C218.149,210.687 218.149,202.617 213.179,197.647L102.353,86.821C97.383,81.851 89.313,81.851 84.343,86.821C79.373,91.791 79.373,99.861 84.343,104.831L195.169,215.657C200.139,220.627 208.209,220.627 213.179,215.657Z" style="fill:rgb(47,118,196);"/>
+                        <path d="M84.343,215.657C79.373,210.687 79.373,202.617 84.343,197.647L195.169,86.821C200.139,81.851 208.209,81.851 213.179,86.821C218.149,91.791 218.149,99.861 213.179,104.831L102.353,215.657C97.383,220.627 89.313,220.627 84.343,215.657Z" style="fill:rgb(47,118,196);"/>
+                    </g>
+                    <circle cx="148.761" cy="151.239" r="137.803" style="fill:none;stroke:rgb(47,118,196);stroke-width:16px;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

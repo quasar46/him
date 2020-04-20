@@ -1,0 +1,27 @@
+.social-list {
+	display: flex;
+	li {
+		margin-right: 20px;
+		display: flex;
+		a {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	svg {
+		&:hover circle {
+			@media (min-width: 768px) {
+				fill: $color-dark-blue !important;
+			}
+		}
+		&:hover path:first-child {
+			fill: $color-dark-blue !important;
+		}
+	}
+}
+
+.price__content {
+	p.price__text {
+		margin-bottom: 30px;
+	}
+}

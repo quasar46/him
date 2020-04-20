@@ -1,0 +1,29 @@
+.price {
+	background-image: url("../images/price-bg.jpg");
+	padding-top: 70px;
+	padding-bottom: 140px;
+	h1.title {
+		justify-content: flex-start;
+		@media(max-width: 768px) {
+			justify-content: center;
+		}
+	}
+	@media (max-width: 768px) {
+		padding-top: 35px;
+		padding-bottom: 25px;
+	}
+}
+
+.price__content {
+	width: 50%;
+	background-color: $color-white;
+	border-radius: 20px;
+	padding: 35px 40px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #5c5c5c;
+	@media (max-width: 768px) {
+		width: 100%;
+		font-size: 12px;
+	}
+}

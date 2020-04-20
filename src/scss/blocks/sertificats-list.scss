@@ -1,0 +1,9 @@
+.sertificats-list {
+	display: flex;
+	margin-right: -25px;
+	li {
+		display: flex !important;
+		justify-content: center;
+		padding-right: 25px;
+	}
+}

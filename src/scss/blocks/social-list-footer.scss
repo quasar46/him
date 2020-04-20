@@ -1,0 +1,23 @@
+.social-list-footer {
+	display: flex;
+	li {
+		margin-right: 20px;
+		width: 34px;
+		height: 34px;
+		svg {
+			&:hover circle {
+				fill: $color-light-blue !important;
+			}
+			&:hover path {
+				&:first-child {
+					fill: $color-light-blue !important;
+				}
+			}
+			&:hover path {
+				&:last-child {
+					fill: $color-white !important;
+				}
+			}
+		}
+	}
+}
