@@ -1,4 +1,11 @@
 .questions {
 	padding-top: 80px;
 	padding-bottom: 75px;
+	.container {
+		display: flex;
+		flex-direction: column;
+		button {
+			align-self: center;
+		}
+	}
 }

@@ -1,6 +1,9 @@
 .results-list {
 	margin-right: -15px;
-	.item {
+	li.item {
+		display: flex;
+	}
+	.item__wrapper {
 		position: relative;
 		padding-right: 15px;
 		display: flex;
@@ -20,6 +23,21 @@
 			top: 20px;
 			right: 14px;
 			background-image: url("../images/before.png");
+		}
+	}
+	&--2 {
+		padding: 0 100px;
+		.item {
+			padding-right: 15px;
+			@media (max-width: 768px) {
+				display: flex;
+				justify-content: center;
+				padding-right: 0;
+			}
+		}
+		@media (max-width: 768px) {
+			padding: 0;
+			margin-right: 0;
 		}
 	}
 }

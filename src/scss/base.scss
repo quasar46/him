@@ -15,6 +15,9 @@ body {
 	font-size: 16px;
 	line-height: 1.2;
 	overflow-x: hidden;
+	&.current {
+		overflow: hidden;
+	}
 }
 
 img {
@@ -58,14 +61,18 @@ button.btn {
 	padding: 25px 75px;
 	text-transform: uppercase;
 	color: $color-white;
+	.ui-icon {
+		display: none !important;
+	}
 	&:hover {
 		@media (min-width: 768px) {
 			background-color: $color-dark-blue;
 		}
 	}
 	@media (max-width: 768px) {
-		font-size: 12px;
-		padding: 15px 25px;
+		font-size: 12px !important;
+		padding: 15px 25px !important;
+		margin: 0 !important;
 	}
 }
 
@@ -83,4 +90,15 @@ section {
 	@media (min-width: 769px) {
 		display: none !important;
 	}
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
 }

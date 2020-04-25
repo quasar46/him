@@ -1,6 +1,6 @@
 section.services#anchor2
 	.container
-		h1.title.title--light 
+		h2.title.title--light 
 			span Услуги
 
 		// номер слайда
@@ -14,123 +14,320 @@ section.services#anchor2
 		// карусель услуги
 		ul.services-list.slick-slider-2
 			li.item
-				span.title Стулья
+				span.title Диваны и подушки
 				.picture
 					img(src="images/services/item1.png" alt="")
 				.bottom-content
 					.bottom-content__row
 						span.on-desktop Стоимость:
-						span.on-mobile Цена:
+						span.on-mobile.show-price Цена:
 						span от 100 р.
 					.bottom-content__row
 						span.on-desktop Срок чистки:
 						span.on-mobile Срок:
 						span 30 мин.
-				button.btn.on-desktop Узнать цену
-				button.btn.on-mobile Цена
+				button.btn.on-desktop.show-price Узнать цену
+				button.btn.on-mobile.show-price Цена
+			li.item
+				span.title Стулья и кресла
+				.picture
+					img(src="images/services/item2.png" alt="")
+				.bottom-content
+					.bottom-content__row
+						span.on-desktop Стоимость:
+						span.on-mobile.show-price Цена:
+						span от 100 р.
+					.bottom-content__row
+						span.on-desktop Срок чистки:
+						span.on-mobile Срок:
+						span 30 мин.
+				button.btn.on-desktop.show-price Узнать цену
+				button.btn.on-mobile.show-price Цена
 			li.item
 				span.title Кухонные уголки
 				.picture
-					img(src="images/services/item2.png" alt="")
-				.bottom-content
-					.bottom-content__row
-						span.on-desktop Стоимость:
-						span.on-mobile Цена:
-						span от 100 р.
-					.bottom-content__row
-						span.on-desktop Срок чистки:
-						span.on-mobile Срок:
-						span 30 мин.
-				button.btn.on-desktop Узнать цену
-				button.btn.on-mobile Цена
-			li.item
-				span.title Автомобильные сиденья
-				.picture
 					img(src="images/services/item3.png" alt="")
 				.bottom-content
 					.bottom-content__row
 						span.on-desktop Стоимость:
-						span.on-mobile Цена:
+						span.on-mobile.show-price Цена:
 						span от 100 р.
 					.bottom-content__row
 						span.on-desktop Срок чистки:
 						span.on-mobile Срок:
 						span 30 мин.
-				button.btn.on-desktop Узнать цену
-				button.btn.on-mobile Цена
+				button.btn.on-desktop.show-price Узнать цену
+				button.btn.on-mobile.show-price Цена
 			li.item
-				span.title Ковровые покрытия
+				span.title Матрасы и пуфики
 				.picture
 					img(src="images/services/item4.png" alt="")
 				.bottom-content
 					.bottom-content__row
 						span.on-desktop Стоимость:
-						span.on-mobile Цена:
+						span.on-mobile.show-price Цена:
 						span от 100 р.
 					.bottom-content__row
 						span.on-desktop Срок чистки:
 						span.on-mobile Срок:
 						span 30 мин.
-				button.btn.on-desktop Узнать цену
-				button.btn.on-mobile Цена
+				button.btn.on-desktop.show-price Узнать цену
+				button.btn.on-mobile.show-price Цена
 			li.item
-				span.title
+				span.title Ковровые покрытия
 				.picture
 					img(src="images/services/item1.png" alt="")
 				.bottom-content
 					.bottom-content__row
 						span.on-desktop Стоимость:
-						span.on-mobile Цена:
+						span.on-mobile.show-price Цена:
 						span от 100 р.
 					.bottom-content__row
 						span.on-desktop Срок чистки:
 						span.on-mobile Срок:
 						span 30 мин.
-				button.btn.on-desktop Узнать цену
-				button.btn.on-mobile Цена
+				button.btn.on-desktop.show-price Узнать цену
+				button.btn.on-mobile.show-price Цена
 			li.item
-				span.title
+				span.title Автомобильные сиденья
 				.picture
-					img(src="images/services/item2.png" alt="")
+					img(src="images/services/item1.png" alt="")
 				.bottom-content
 					.bottom-content__row
 						span.on-desktop Стоимость:
-						span.on-mobile Цена:
+						span.on-mobile.show-price Цена:
 						span от 100 р.
 					.bottom-content__row
 						span.on-desktop Срок чистки:
 						span.on-mobile Срок:
 						span 30 мин.
-				button.btn.on-desktop Узнать цену
-				button.btn.on-mobile Цена
-			li.item
-				span.title
-				.picture
-					img(src="images/services/item3.png" alt="")
-				.bottom-content
-					.bottom-content__row
-						span.on-desktop Стоимость:
-						span.on-mobile Цена:
-						span от 100 р.
-					.bottom-content__row
-						span.on-desktop Срок чистки:
-						span.on-mobile Срок:
-						span 30 мин.
-				button.btn.on-desktop Узнать цену
-				button.btn.on-mobile Цена
-			li.item
-				span.title
-				.picture
-					img(src="images/services/item4.png" alt="")
-				.bottom-content
-					.bottom-content__row
-						span.on-desktop Стоимость:
-						span.on-mobile Цена:
-						span от 100 р.
-					.bottom-content__row
-						span.on-desktop Срок чистки:
-						span.on-mobile Срок:
-						span 30 мин.
-				button.btn.on-desktop Узнать цену
-				button.btn.on-mobile Цена
-		button.btn Заказать химчистку
+				button.btn.on-desktop.show-price Узнать цену
+				button.btn.on-mobile.show-price Цена
+		button.btn.show-order Заказать химчистку
+
+		.popup#popup-price
+			.closed
+			h2 Стоимость услуг
+			.head
+				ul.container.tab
+					li.tablinks.active(onclick="openItem(event, 'item1')")
+						button Диваны и подушки
+					li.tablinks(onclick="openItem(event, 'item2')")
+						button Стулья и кресла
+					li.tablinks(onclick="openItem(event, 'item3')")
+						button Матрасы и подушки
+					li.tablinks(onclick="openItem(event, 'item4')")
+						button Ковровые покрытия
+			.table-container
+				table.container.tabcontent#item1(style="display: block")
+					thead
+						tr
+							th.col-1 Наименование предмета
+							th.col-2 Единица измерения
+							th.col-3 Стоимость
+							th.col-4 Примерное время
+					tbody
+						tr
+							td.col-1 Диван 2-х местный
+							td.col-2 шт.
+							td.col-3 1000 р.
+							td.col-4 1,5 ч.
+						tr
+							td.col-1 Диван 3-х местный
+							td.col-2 шт.
+							td.col-3 1500 р.
+							td.col-4 2 ч.
+						tr
+							td.col-1 Диван 4-х местный, угловой
+							td.col-2 шт.
+							td.col-3 2000 р.
+							td.col-4 2,5 ч.
+						tr
+							td.col-1 Диван 4-х местный, угловой (только сиденья)
+							td.col-2 шт.
+							td.col-3 1200 р.
+							td.col-4 1,5 ч.
+						tr
+							td.col-1 Диван секционный, сборный
+							td.col-2 1 секция
+							td.col-3 500 р.
+							td.col-4 40 мин.
+						tr
+							td.col-1 Выдвижное спальное место
+							td.col-2 шт.
+							td.col-3 300 р.
+							td.col-4 30 мин.
+						tr
+							td.col-1 Диван многоместный (одно посадочное место 80 см)
+							td.col-2 1 место
+							td.col-3 300 р.
+							td.col-4 2 ч.
+						tr
+							td.col-1 Подушки съемные от дивана (маленькие)
+							td.col-2 комплект
+							td.col-3 1500 р.
+							td.col-4 20 мин.
+						tr
+							td.col-1 Подушки съемные от дивана (большие)
+							td.col-2 комплект
+							td.col-3 500 р.
+							td.col-4 40 мин.
+				table.container.tabcontent#item2
+					thead
+						tr
+							th.col-1 Наименование предмета
+							th.col-2 Единица измерения
+							th.col-3 Стоимость
+							th.col-4 Примерное время
+					tbody
+						tr
+							td.col-1 Диван 2-х местный
+							td.col-2 шт.
+							td.col-3 1000 р.
+							td.col-4 1,5 ч.
+						tr
+							td.col-1 Диван 3-х местный
+							td.col-2 шт.
+							td.col-3 1500 р.
+							td.col-4 2 ч.
+						tr
+							td.col-1 Диван 4-х местный, угловой
+							td.col-2 шт.
+							td.col-3 2000 р.
+							td.col-4 2,5 ч.
+						tr
+							td.col-1 Диван 4-х местный, угловой (только сиденья)
+							td.col-2 шт.
+							td.col-3 1200 р.
+							td.col-4 1,5 ч.
+						tr
+							td.col-1 Диван секционный, сборный
+							td.col-2 1 секция
+							td.col-3 500 р.
+							td.col-4 40 мин.
+						tr
+							td.col-1 Выдвижное спальное место
+							td.col-2 шт.
+							td.col-3 300 р.
+							td.col-4 30 мин.
+						tr
+							td.col-1 Диван многоместный (одно посадочное место 80 см)
+							td.col-2 1 место
+							td.col-3 300 р.
+							td.col-4 2 ч.
+						tr
+							td.col-1 Подушки съемные от дивана (маленькие)
+							td.col-2 комплект
+							td.col-3 1500 р.
+							td.col-4 20 мин.
+						tr
+							td.col-1 Подушки съемные от дивана (большие)
+							td.col-2 комплект
+							td.col-3 500 р.
+							td.col-4 40 мин.
+				table.container.tabcontent#item3
+					thead
+						tr
+							th.col-1 Наименование предмета
+							th.col-2 Единица измерения
+							th.col-3 Стоимость
+							th.col-4 Примерное время
+					tbody
+						tr
+							td.col-1 Диван 2-х местный
+							td.col-2 шт.
+							td.col-3 1000 р.
+							td.col-4 1,5 ч.
+						tr
+							td.col-1 Диван 3-х местный
+							td.col-2 шт.
+							td.col-3 1500 р.
+							td.col-4 2 ч.
+						tr
+							td.col-1 Диван 4-х местный, угловой
+							td.col-2 шт.
+							td.col-3 2000 р.
+							td.col-4 2,5 ч.
+						tr
+							td.col-1 Диван 4-х местный, угловой (только сиденья)
+							td.col-2 шт.
+							td.col-3 1200 р.
+							td.col-4 1,5 ч.
+						tr
+							td.col-1 Диван секционный, сборный
+							td.col-2 1 секция
+							td.col-3 500 р.
+							td.col-4 40 мин.
+						tr
+							td.col-1 Выдвижное спальное место
+							td.col-2 шт.
+							td.col-3 300 р.
+							td.col-4 30 мин.
+						tr
+							td.col-1 Диван многоместный (одно посадочное место 80 см)
+							td.col-2 1 место
+							td.col-3 300 р.
+							td.col-4 2 ч.
+						tr
+							td.col-1 Подушки съемные от дивана (маленькие)
+							td.col-2 комплект
+							td.col-3 1500 р.
+							td.col-4 20 мин.
+						tr
+							td.col-1 Подушки съемные от дивана (большие)
+							td.col-2 комплект
+							td.col-3 500 р.
+							td.col-4 40 мин.
+				table.container.tabcontent#item4
+					thead
+						tr
+							th.col-1 Наименование предмета
+							th.col-2 Единица измерения
+							th.col-3 Стоимость
+							th.col-4 Примерное время
+					tbody
+						tr
+							td.col-1 Диван 2-х местный
+							td.col-2 шт.
+							td.col-3 1000 р.
+							td.col-4 1,5 ч.
+						tr
+							td.col-1 Диван 3-х местный
+							td.col-2 шт.
+							td.col-3 1500 р.
+							td.col-4 2 ч.
+						tr
+							td.col-1 Диван 4-х местный, угловой
+							td.col-2 шт.
+							td.col-3 2000 р.
+							td.col-4 2,5 ч.
+						tr
+							td.col-1 Диван 4-х местный, угловой (только сиденья)
+							td.col-2 шт.
+							td.col-3 1200 р.
+							td.col-4 1,5 ч.
+						tr
+							td.col-1 Диван секционный, сборный
+							td.col-2 1 секция
+							td.col-3 500 р.
+							td.col-4 40 мин.
+						tr
+							td.col-1 Выдвижное спальное место
+							td.col-2 шт.
+							td.col-3 300 р.
+							td.col-4 30 мин.
+						tr
+							td.col-1 Диван многоместный (одно посадочное место 80 см)
+							td.col-2 1 место
+							td.col-3 300 р.
+							td.col-4 2 ч.
+						tr
+							td.col-1 Подушки съемные от дивана (маленькие)
+							td.col-2 комплект
+							td.col-3 1500 р.
+							td.col-4 20 мин.
+						tr
+							td.col-1 Подушки съемные от дивана (большие)
+							td.col-2 комплект
+							td.col-3 500 р.
+							td.col-4 40 мин.

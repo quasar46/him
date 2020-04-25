@@ -1,3 +1,20 @@
+// tabs popup price
+function openItem(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+
+
 // header
 var helpers = {
     addZeros: function (n) {
@@ -10,10 +27,9 @@ function sliderInit() {
     $slider.each(function () {
         let $sliderParent = $(this).parent();
         $(this).slick({
+            infinite: true,
             slidesToShow: 1,
-            slidesToScroll: 1,
             dots: false,
-            infinite: false,
             prevArrow: $('.prev'),
             nextArrow: $('.next'),
         });
@@ -115,8 +131,8 @@ function sliderInit3() {
     $slider.each(function () {
         let $sliderParent = $(this).parent();
         $(this).slick({
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             dots: false,
             prevArrow: $('.prev-3'),
             nextArrow: $('.next-3'),
@@ -138,12 +154,42 @@ function sliderInit3() {
 
 sliderInit3();
 
-$(document).ready(function () {
-    $('.slick-slider-10').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
+
+// $(document).ready(function () {
+//     $('.slick-slider-10').slick({
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//     });
+// });
+
+function sliderInit10() {
+    let $slider = $('.slick-slider-10');
+    $slider.each(function () {
+        let $sliderParent = $(this).parent();
+        $(this).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: $('.prev-10'),
+            nextArrow: $('.next-10'),
+        });
+
+        if ($(this).find('.item').length > 1) {
+            $(this).siblings('.slides-numbers--10').show();
+        }
+
+        $(this).on('afterChange', function (event, slick, currentSlide) {
+            $sliderParent.find('.slides-numbers--10 .active').html(helpers.addZeros(currentSlide + 1));
+        });
+
+        let sliderItemsNum = $(this).find('.slick-slide').not('.slick-cloned').length;
+        $sliderParent.find('.slides-numbers--10 .total').html(helpers.addZeros(sliderItemsNum));
+
     });
-});
+};
+
+sliderInit10();
+
+
 
 /////////////////////////////////////////////////////
 // results
@@ -284,17 +330,18 @@ sliderInit6();
 $(document).ready(function () {
     $('.slick-slider-7').slick({
         slidesToShow: 4,
+        autoplay: true,
         responsive: [
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
             {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
                 }
             }
         ]
@@ -307,6 +354,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.slick-slider-8').slick({
         slidesToShow: 3,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 767,
@@ -374,21 +422,25 @@ sliderInit9();
 $(document).ready(function () {
     $('.main-menu').on('click', function () {
         $('.main-menu__burger').toggleClass('active');
-        $('.main-menu__opened').toggleClass('active');
-    })
-})
-
-//switch
-$(document).ready(function () {
-    $('.switch').on('click', function () {
-        $('.items-wrap .item').toggleClass('active2')
+        // $('.main-menu__opened').toggleClass('active');
+        $('.main-menu__opened').slideToggle(400, 'swing');
     })
 })
 
 //slide
 $(document).ready(function () {
     $('#show-all').on('click', function () {
-        $('.to-show').slideToggle();
+        // $('.to-show').slideToggle();
+        $('.accordion.on-mobile').slideToggle();
+        $('.hidden').slideToggle();
+        if (!$(this).data('status')) {
+            $(this).html('Скрыть');
+            $(this).data('status', true);
+        }
+        else {
+            $(this).html('Посмотреть все');
+            $(this).data('status', false);
+        }
     })
 })
 
@@ -402,24 +454,63 @@ $(document).ready(function () {
     });
 });
 
-
-//accordion
-// var acc = document.getElementsByClassName("accordion");
-// var i;
-
-// for (i = 0; i < acc.length; i++) {
-//     acc[i].addEventListener("click", function () {
-//         this.classList.toggle("active");
-//         this.nextElementSibling.classList.toggle('active');
-//         var panel = this.nextElementSibling;
-//         if (panel.style.maxHeight) {
-//             panel.style.maxHeight = null;
-//         } else {
-//             panel.style.maxHeight = panel.scrollHeight + "px";
-//         }
-//     });
-// }
-
 $(function () {
-    $(".accordion").accordion();
+    $(".accordion").accordion({
+        heightStyle: "content",
+        active: false,
+        collapsible: true
+    });
 });
+
+
+//switch
+tabFunc();
+
+function tabFunc() {
+    const $tabs = $('.item-wrap');
+
+    $tabs.each(function () {
+        const $tab = $(this),
+            $tabInput = $tab.find('.switch input'),
+            $tabItem = $tab.find('.items-wrap .item');
+
+        showTab($tabInput, $tabItem);
+        $tabInput.on('change', function () { showTab($tabInput, $tabItem); });
+    });
+
+    function showTab($tabInput, $tabItem) {
+        const inputChecked = $tabInput.prop('checked');
+
+        if (inputChecked) {
+            $tabItem.eq(0).hide();
+            $tabItem.eq(1).fadeIn(350);
+        } else {
+            $tabItem.eq(0).fadeIn(350);
+            $tabItem.eq(1).hide();
+        }
+    }
+}
+
+// closed popup
+$(document).ready(function () {
+    $('.closed').on('click', function () {
+        $('.popup').removeClass('active');
+        $('body').removeClass('current');
+    })
+})
+
+// узнать цену
+$(document).ready(function () {
+    $('.show-price').on('click', function () {
+        $('#popup-price').addClass('active');
+        $('body').addClass('current');
+    })
+})
+
+// заказать химчистку
+$(document).ready(function () {
+    $('.show-order').on('click', function () {
+        $('#popup-order').addClass('active');
+        $('body').addClass('current');
+    })
+})

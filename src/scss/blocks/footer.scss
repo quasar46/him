@@ -2,6 +2,13 @@
 	background-color: $color-dark-blue;
 	color: $color-white;
 	padding: 70px 0;
+	a {
+		&:hover {
+			@media (min-width: 768px) {
+				color: $color-light-blue;
+			}
+		}
+	}
 	@media (max-width: 768px) {
 		padding: 35px;
 	}

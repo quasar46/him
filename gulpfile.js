@@ -18,7 +18,7 @@ var htmlmin = require('gulp-htmlmin');
 var uglify = require('gulp-uglify-es').default;
 
 gulp.task("pug", function () {
-    return gulp.src("src/pug/pages/*.pug")
+    return gulp.src("src/pug/*.pug")
         .pipe(pug())
         .pipe(gulp.dest("build"));
 })

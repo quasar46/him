@@ -1,13 +1,13 @@
 section.results#anchor3
 	.container
-		h1.title 
+		h2.title 
 			span Результаты нашей работы
 		h2.subtitle.subtitle--mode
-			span Фотоотчет
+			span.num01 Фотоотчет
 
 		.results__fotoreport
 			// номер слайда
-			.slides-numbers.slides-numbers--3(style="display: block").slick
+			.slides-numbers.slides-numbers--3(style="display: block").slick.on-desktop
 				button.prev.prev-3
 				span.active 01
 				i &nbsp; / &nbsp;
@@ -17,26 +17,37 @@ section.results#anchor3
 			// слайдер
 			ul.results-list.slick-slider-3.on-desktop
 				li.item
-					img(src="../images/results/item1.jpg" alt="" width="576" height="450")
-					span.after
+					.item__wrapper
+						img(src="images/results/item1.jpg" alt="" width="576" height="450")
+						span.after
+					.item__wrapper
+						img(src="images/results/item2.jpg" alt="" width="576" height="450")
+						span.before
 				li.item
-					img(src="../images/results/item2.jpg" alt="" width="576" height="450")
-					span.before
+					.item__wrapper
+						img(src="images/results/item1.jpg" alt="" width="576" height="450")
+						span.after
+					.item__wrapper
+						img(src="images/results/item1.jpg" alt="" width="576" height="450")
+						span.before
 				li.item
-					img(src="../images/results/item1.jpg" alt="" width="576" height="450")
-					span.after
-				li.item
-					img(src="../images/results/item1.jpg" alt="" width="576" height="450")
-					span.before
-				li.item
-					img(src="../images/results/item2.jpg" alt="" width="576" height="450")
-					span.after
-				li.item
-					img(src="../images/results/item2.jpg" alt="" width="576" height="450")
-					span.before
+					.item__wrapper
+						img(src="images/results/item2.jpg" alt="" width="576" height="450")
+						span.after
+					.item__wrapper
+						img(src="images/results/item2.jpg" alt="" width="576" height="450")
+						span.before
 
 
 			// слайдер мобильная версия
+			// номер слайда
+			.slides-numbers.slides-numbers--10(style="display: block").slick.on-mobile
+				button.prev.prev-10
+				span.active 01
+				i &nbsp; / &nbsp;
+				span.total
+				button.next.next-10
+
 			.results-list__mobile.slick-slider-10.on-mobile
 				.item-wrap
 					// switch
@@ -45,10 +56,10 @@ section.results#anchor3
 						span.slider
 					ul.items-wrap
 						li.item.before-picture.active
-							img(src="../images/results/item1.jpg" alt="" width="576" height="450")
+							img(src="images/results/item1.jpg" alt="" width="576" height="450")
 							span.after
 						li.item.after-picture
-							img(src="../images/results/item2.jpg" alt="" width="576" height="450")
+							img(src="images/results/item2.jpg" alt="" width="576" height="450")
 							span.before
 				.item-wrap
 					// switch
@@ -57,10 +68,10 @@ section.results#anchor3
 						span.slider
 					ul.items-wrap
 						li.item.before-picture.active
-							img(src="../images/results/item1.jpg" alt="" width="576" height="450")
+							img(src="images/results/item1.jpg" alt="" width="576" height="450")
 							span.after
 						li.item.after-picture
-							img(src="../images/results/item2.jpg" alt="" width="576" height="450")
+							img(src="images/results/item2.jpg" alt="" width="576" height="450")
 							span.before
 
 		.results__videoreport
@@ -74,14 +85,14 @@ section.results#anchor3
 				button.next.next-4
 
 			h2.subtitle.subtitle--mode
-				span Видеоотчет
-			ul.results-list-2.results-list.slick-slider-4
+				span.num02 Видеоотчет
+			ul.results-list.results-list--2.slick-slider-4
 				li.item
-					img(src="../images/results/item-video1.jpg" alt="" width="473" height="290")
+					img(src="images/results/item-video1.jpg" alt="" width="473" height="290")
 				li.item
-					img(src="../images/results/item-video2.jpg" alt="" width="473" height="290")
+					img(src="images/results/item-video2.jpg" alt="" width="473" height="290")
 				li.item
-					img(src="../images/results/item-video1.jpg" alt="" width="473" height="290")
+					img(src="images/results/item-video1.jpg" alt="" width="473" height="290")
 				li.item
-					img(src="../images/results/item-video2.jpg" alt="" width="473" height="290")
+					img(src="images/results/item-video2.jpg" alt="" width="473" height="290")
 
