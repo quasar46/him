@@ -2,6 +2,7 @@
 	margin-right: -15px;
 	li.item {
 		display: flex;
+		position: relative;
 	}
 	.item__wrapper {
 		position: relative;
@@ -136,6 +137,25 @@
 			&.active {
 				display: block;
 			}
+		}
+	}
+}
+
+.results-list--2 {
+	span.results-list__subtitle {
+		font-size: 20px;
+		font-weight: 500;
+		color: $color-white;
+		bottom: 60px;
+		left: 50%;
+		transform: translateX(-50%);
+		position: absolute;
+		@media (max-width: 992px) {
+			font-size: 16px;
+			bottom: 20px;
+		}
+		@media(max-width: 768px) {
+			font-size: 12px;
 		}
 	}
 }
