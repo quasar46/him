@@ -8,15 +8,24 @@
 }
 
 .sale__item {
-	background-image: url("../images/sale-bg.jpg");
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 80px;
 	margin: 0 80px;
 	border-radius: 20px;
-	@media (max-width: 768px) {
+	height: 300px;
+	@media (max-width: 992px) {
 		padding: 25px 20px;
+	}
+	@media (max-width: 768px) {
 		margin: 0;
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 150px;
 	}
 }
 

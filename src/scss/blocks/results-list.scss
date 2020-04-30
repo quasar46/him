@@ -3,6 +3,9 @@
 	li.item {
 		display: flex;
 		position: relative;
+		img {
+			border-radius: 20px;
+		}
 	}
 	.item__wrapper {
 		position: relative;
@@ -28,8 +31,24 @@
 	}
 	&--2 {
 		padding: 0 100px;
+		position: relative;
 		.item {
 			padding-right: 15px;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				left: 50%;
+				width: 50px;
+				height: 50px;
+				background-image: url("../images/play-btn.png");
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			img {
+				border-radius: 20px;
+			}
 			@media (max-width: 768px) {
 				display: flex;
 				justify-content: center;
@@ -154,7 +173,7 @@
 			font-size: 16px;
 			bottom: 20px;
 		}
-		@media(max-width: 768px) {
+		@media (max-width: 768px) {
 			font-size: 12px;
 		}
 	}
