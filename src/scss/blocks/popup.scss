@@ -57,6 +57,7 @@
         ul.container {
             display: flex;
             justify-content: space-between;
+
             li {
                 &.active {
                     button {
@@ -71,10 +72,14 @@
                     font-size: 20px;
                     font-weight: 600;
 
-                    @media (max-width: 768px) {
+                    @media (max-width: 992px) {
                         font-size: 10px;
                     }
                 }
+            }
+            @media (max-width: 768px) {
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
     }

@@ -3,8 +3,10 @@
 	li.item {
 		display: flex;
 		position: relative;
+		max-height: 390px;
 		img {
 			border-radius: 20px;
+			object-fit: cover;
 		}
 	}
 	.item__wrapper {
@@ -34,7 +36,7 @@
 		position: relative;
 		.item {
 			padding-right: 15px;
-			&::before {
+			&::after {
 				content: "";
 				position: absolute;
 				top: 50%;
@@ -45,6 +47,7 @@
 				background-image: url("../images/play-btn.png");
 				background-repeat: no-repeat;
 				background-size: cover;
+				// cursor: pointer;
 			}
 			img {
 				border-radius: 20px;

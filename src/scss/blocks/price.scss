@@ -4,7 +4,7 @@
 	padding-bottom: 140px;
 	h2.title {
 		justify-content: flex-start;
-		@media(max-width: 768px) {
+		@media (max-width: 768px) {
 			justify-content: center;
 		}
 	}
@@ -26,4 +26,8 @@
 		width: 100%;
 		font-size: 12px;
 	}
+}
+
+.price__services {
+	margin-top: auto;
 }

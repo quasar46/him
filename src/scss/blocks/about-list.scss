@@ -16,6 +16,11 @@
 			margin-right: 0;
 		}
 	}
+	li a {
+		text-decoration: none;
+		color: $color-light-blue;
+		margin-top: 20px;
+	}
 	.text {
 		font-size: 14px;
 		font-weight: 400;
